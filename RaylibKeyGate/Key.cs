@@ -1,9 +1,6 @@
 using System;
 
-namespace RaylibKeyGate
+public class Key
 {
-    public class Key
-    {
-        public string targetDoor;
-    }
+    public string targetDoor;
 }

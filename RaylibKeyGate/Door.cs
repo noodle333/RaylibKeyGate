@@ -1,9 +1,6 @@
 using System;
 
-namespace RaylibKeyGate
+public class Door
 {
-    public class Door
-    {
-        public bool isLocked = true;
-    }
+    public bool isLocked = true;
 }

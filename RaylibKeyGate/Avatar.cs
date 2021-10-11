@@ -3,7 +3,7 @@ using Raylib_cs;
 
 public class Avatar
 {
-    Rectangle player = new Rectangle(80, 80, 32, 32);
+    public Rectangle player = new Rectangle(80, 80, 32, 32);
 
     public Rectangle PlayerMovement(Rectangle p)
     {
@@ -25,7 +25,6 @@ public class Avatar
         {
             p.y += speed;
         }
-
         return p;
     }
 }
