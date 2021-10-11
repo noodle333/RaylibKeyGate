@@ -27,4 +27,8 @@ public class Avatar
         }
         return p;
     }
+    public void DrawAvatar()
+    {
+        Raylib.DrawRectangleRec(player, Color.WHITE);
+    }
 }

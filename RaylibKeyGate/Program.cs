@@ -1,21 +1,24 @@
 ﻿using System;
 using Raylib_cs;
 
+//INIT RAYLIB
 Raylib.InitWindow(800, 600, "KeyGate");
 Raylib.SetTargetFPS(60);
 
+//CREATE INSTANCES
 Key key = new Key();
 Door door = new Door();
 Avatar avatar = new Avatar();
 
 while (!Raylib.WindowShouldClose())
 {
-    //CREATE INSTANCES
-
+    //PLAYER MOVEMENT
     avatar.player = avatar.PlayerMovement(avatar.player);
 
+    //DRAW GAME ELEMENTS
     DrawRaylib();
-    Raylib.DrawRectangleRec(avatar.player, Color.BLACK);
+    avatar.DrawAvatar();
+    key.DrawKey();
 }
 
 
@@ -23,6 +26,6 @@ while (!Raylib.WindowShouldClose())
 static void DrawRaylib()
 {
     Raylib.BeginDrawing();
-    Raylib.ClearBackground(Color.WHITE);
+    Raylib.ClearBackground(Color.PURPLE);
     Raylib.EndDrawing();
 }
